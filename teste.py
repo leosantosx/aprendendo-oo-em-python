@@ -13,7 +13,7 @@ esquadrao.dar_liker()
 
 playlist = Playlist('Filmes e séries', filmes_e_series) 
 print('=-'*20)
-print(f'Tamanho da playlist: {playlist.tamanho}')
+print(f'Tamanho da playlist: {len(playlist)}')
 
 for programa in playlist:
     print('-=' *20)
