@@ -1,4 +1,5 @@
 class Programa:
+    
     def __init__(self, nome, ano):
         self._nome = nome
         self.ano = ano
@@ -27,7 +28,8 @@ class Filme(Programa):
         self.duracao = duracao
     
     def __str__(self):
-        return f'Nome: {self.nome}\nAno: {self.ano}\nDuração: {self.duracao}\nLikes: {self.likes}'
+        return f'Nome: {self.nome}\nAno: {self.ano}\nDuração: {self.duracao} min\nLikes: {self.likes}'
+    
     
 class Serie(Programa):
     
@@ -38,4 +40,20 @@ class Serie(Programa):
     def __str__(self):
         return f'Nome: {self.nome}\nAno: {self.ano}\nTemporadas: {self.temporadas}\nLikes: {self.likes}'
     
-   
+    
+class Playlist:
+    def __init__(self, nome, programas):
+        self.nome = nome
+        self._programas = programas
+    
+    def __getitem__(self, item):
+        return self._programas[item]
+        
+    @property
+    def listagem(self):
+        return self._programas
+        
+    @property
+    def tamanho(self):
+        return len(self._programas)
+        

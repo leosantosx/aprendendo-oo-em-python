@@ -1,10 +1,21 @@
 from programa import *
+        
+esquadrao = Filme('Esquadrão suicida', 2016, 120)
+the_flash = Serie('The flash', 2018, 4)
+chappie = Filme('Chappie', 2019, 130)
 
-filme = Filme('Esquadrão suicida', 2016, 120)
-serie = Serie('The 100', 2018, 4)
+filmes_e_series = [esquadrao, the_flash, chappie] 
 
-filmes_e_series = [filme, serie] 
+chappie.dar_liker()
+chappie.dar_liker()
+the_flash.dar_liker()
+esquadrao.dar_liker()
 
-for programa in filmes_e_series:
+playlist = Playlist('Filmes e séries', filmes_e_series) 
+print('=-'*20)
+print(f'Tamanho da playlist: {playlist.tamanho}')
+
+for programa in playlist:
     print('-=' *20)
     print(programa) 
+    
